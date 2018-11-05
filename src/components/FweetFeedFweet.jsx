@@ -1,7 +1,8 @@
 import React from "react";
 import FweetFeedHeaderPic from "./FweetFeedHeaderPic";
+import PropTypes from 'prop-types';
 
-function FweetFeedFweet(){
+function FweetFeedFweet(props){
   let tweetButtonStyles = {
     width: "500px",
     border: "1px solid grey",
@@ -12,11 +13,16 @@ function FweetFeedFweet(){
     <div style={tweetButtonStyles}>
       <FweetFeedHeaderPic/>
       <div>
-        <h4>Lorem Ipsum</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+        <h4>{props.name}</h4>
+        <p>{props.fweet}</p>
       </div>
     </div>
   );
 }
+
+FweetFeedFweet.propTypes = {
+  name: PropTypes.string.isRequired,
+  fweet: PropTypes.string.isRequired
+};
 
 export default FweetFeedFweet;
