@@ -10,6 +10,7 @@ function Nav(props){
     height: "72px",
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-around"
   }
   return (
     <div style={navStyles}>

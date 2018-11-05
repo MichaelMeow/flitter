@@ -12,7 +12,7 @@ function TweetBtn(){
   }
   return (
     <div>
-      <button type="button" style={tweetButtonStyles}>Tweet</button>
+      <button type="button" style={tweetButtonStyles}>Fweet</button>
     </div>
   );
 }

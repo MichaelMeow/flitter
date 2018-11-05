@@ -7,11 +7,12 @@ function ProfileLinks() {
   }
   let navLinkWrapper = {
     display: "flex",
-    width: "100%"
+    width: "100%",
+    justifyContent: "space-around"
   }
   return (
     <ul style={navLinkWrapper}>
-      <li style={navLinkStyles}><a href="#">Tweets</a></li>
+      <li style={navLinkStyles}><a href="#">Fweets</a></li>
       <li style={navLinkStyles}><a href="#">Following</a></li>
       <li style={navLinkStyles}><a href="#">Fololowers</a></li>
     </ul>

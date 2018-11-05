@@ -1,19 +1,18 @@
 import React from "react";
+import NavLink from "./NavLink";
 
 function NavLinks(props) {
-  let navLinkStyles = {
-    listStyle: "none",
 
-  }
   let navLinkWrapper = {
     display: "flex",
-    width: "35%"
+    width: "35%",
+    justifyContent: "space-around"
   }
   return (
     <ul style={navLinkWrapper}>
-      <li style={navLinkStyles}><a href="#">Home</a></li>
-      <li style={navLinkStyles}><a href="#">Notifications</a></li>
-      <li style={navLinkStyles}><a href="#">Messages</a></li>
+      <NavLink name="Home"/>
+      <NavLink name="Notifications"/>
+      <NavLink name="Messages"/>
     </ul>
   )
 };
