@@ -1,17 +1,17 @@
-import React from "react";
-import SuggestedFriend from "./SuggestedFriend";
+import React from 'react';
+import SuggestedFriend from './SuggestedFriend';
 
-function SuggestedFriends(props) {
+function SuggestedFriends() {
   let suggestedFriendsStyles = {
-    border: "1px solid gray",
-    width: "250px",
-    padding: "8px 24px",
-    height: "100%"
-  }
+    border: '1px solid gray',
+    width: '250px',
+    padding: '8px 24px',
+    height: '100%'
+  };
   let h4Styles = {
-    marginTop: "20px",
-    marginBottom: "20px"
-  }
+    marginTop: '20px',
+    marginBottom: '20px'
+  };
   return(
     <div style={suggestedFriendsStyles}>
       <h4 style={h4Styles}>Lorem ipsum</h4>

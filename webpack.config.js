@@ -31,6 +31,26 @@ module.exports = {
 
   module: {
     rules: [
+        {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          emitWarning: true,
+          configFile: "./.eslintrc.json"
+        }
+      },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -41,21 +61,22 @@ module.exports = {
             "react",
           ],
           plugins: [
-            "react-hot-loader/babel"
+            "react-hot-loader/babel",
+      			"styled-jsx/babel"
           ]
         }
       }
-    ]
+    ],
   },
 
   plugins: [
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.NamedModulesPlugin(),
-      new HtmlWebpackPlugin({
-        template:'template.ejs',
-        appMountId: 'react-app-root',
-        title: 'Flitter - Micro Flogging',
-        filename: resolve(__dirname, "build", "index.html"),
-      }),
-    ]
-  };
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template:'template.ejs',
+      appMountId: 'react-app-root',
+      title: 'React Help Queue',
+      filename: resolve(__dirname, "build", "index.html"),
+    }),
+  ]
+};

@@ -1,18 +1,18 @@
-import React from "react";
-import SuggestedFriendsButton from "./SuggestedFriendsButton";
-import FweetFeedHeaderPic from "./FweetFeedHeaderPic";
+import React from 'react';
+import SuggestedFriendsButton from './SuggestedFriendsButton';
+import FweetFeedHeaderPic from './FweetFeedHeaderPic';
 
-function SuggestedFriend(props) {
+function SuggestedFriend() {
   let suggestedFriendStyles = {
-    display: "flex",
-    marginBottom: "20px"
-  }
+    display: 'flex',
+    marginBottom: '20px'
+  };
   return(
     <div style={suggestedFriendStyles}>
-        <FweetFeedHeaderPic/>
-        <div>
-          <p>Donec eu orci et</p>
-          <SuggestedFriendsButton/>
+      <FweetFeedHeaderPic/>
+      <div>
+        <p>Donec eu orci et</p>
+        <SuggestedFriendsButton/>
       </div>
     </div>
   );
